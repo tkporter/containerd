@@ -78,14 +78,14 @@ func normalizeArch(arch, variant string) (string, string) {
 		variant = "" // v8 is implied
 	case "armhf":
 		arch = "arm"
-		variant = ""
+		variant = "" // v7 is implied
 	case "armel":
 		arch = "arm"
 		variant = "v6"
 	case "arm":
 		switch variant {
 		case "v7", "7":
-			variant = "v7"
+			variant = "" // v7 is implied
 		case "5", "6", "8":
 			variant = "v" + variant
 		}
